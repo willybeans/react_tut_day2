@@ -15,17 +15,20 @@ class App extends Component {
     return (
       <div className="App">
         {this.state.soState}
-        <MyComponent />
+        <MyComponent
+          passedState={this.state.soState}
+          user='Johnny'
+         />
       </div>
     );
   }
-
 }
 
-const MyComponent = () => {
+const MyComponent = (props) => {
   return (
     <div>
-      <h2> Im stateless! </h2>
+      <h2>{props.passedState}</h2>
+      our users name is {props.user}
     </div>
   );
 }
