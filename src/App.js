@@ -10,13 +10,24 @@ class App extends Component {
     soState: 'I am ‘stateful!’'
   };
 }
+
   render() {
     return (
       <div className="App">
         {this.state.soState}
+        <MyComponent />
       </div>
     );
   }
+
+}
+
+const MyComponent = () => {
+  return (
+    <div>
+      <h2> Im stateless! </h2>
+    </div>
+  );
 }
 
 export default App;
